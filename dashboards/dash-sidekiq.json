@@ -191,7 +191,7 @@
           "exemplar": true,
           "expr": "sum by(pid) (sidekiq_mem_total_bytes{instance=~\"$instance\", job=~\"gitlab/gitlab-sidekiq\"})",
           "interval": "",
-          "legendFormat": "{{"{{pid}}"}}",
+          "legendFormat": "{{pid}}",
           "refId": "A"
         }
       ],
@@ -477,7 +477,7 @@
           "exemplar": true,
           "expr": "sum by (load_balancing_strategy) (rate(sidekiq_load_balancing_count{instance=~\"$instance\"}[5m]))",
           "interval": "",
-          "legendFormat": "{{"{{load_balancing_strategy}}"}}",
+          "legendFormat": "{{load_balancing_strategy}}",
           "refId": "A"
         }
       ],
