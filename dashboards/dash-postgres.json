@@ -390,7 +390,7 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "legendFormat": " {{"{{instance}}"}}-Max Conn",
+          "legendFormat": "{{instance}}-Max Conn",
           "refId": "B"
         }
       ],
@@ -680,7 +680,7 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "legendFormat": " {{"{{datname}}",
+          "legendFormat": "{{datname}}",
           "refId": "B"
         }
       ],
@@ -953,7 +953,7 @@
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "Cache Hit Ratio - {{"{{datname}}"}} ",
+          "legendFormat": "Cache Hit Ratio - {{datname}}",
           "refId": "A"
         }
       ],
@@ -1066,7 +1066,7 @@
           "exemplar": true,
           "expr": "sum(rate(pg_stat_database_xact_commit{instance=~\"$instance\"}[1m])) by (datname) !=0",
           "interval": "",
-          "legendFormat": "commit-{{"{{datname}}",
+          "legendFormat": "commit-{{datname}}",
           "refId": "A"
         },
         {
@@ -1078,7 +1078,7 @@
           "expr": "sum(rate(pg_stat_database_xact_rollback{instance=~\"$instance\"}[1m])) by (datname) !=0",
           "hide": false,
           "interval": "",
-          "legendFormat": "rollback-{{"{{datname}}",
+          "legendFormat": "rollback-{{datname}}",
           "refId": "B"
         }
       ],

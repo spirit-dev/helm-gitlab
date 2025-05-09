@@ -553,7 +553,7 @@
           "expr": "redis_memory_used_bytes{instance=~\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 2,
-          "legendFormat": "used - {{"{{instance}}",
+          "legendFormat": "used - {{instance}}",
           "metric": "",
           "refId": "A",
           "step": 240,
@@ -568,7 +568,7 @@
           "format": "time_series",
           "hide": false,
           "intervalFactor": 2,
-          "legendFormat": "max - {{"{{instance}}",
+          "legendFormat": "max - {{instance}}",
           "refId": "B",
           "step": 240
         }
@@ -1163,7 +1163,7 @@
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{db}}"}} ",
+          "legendFormat": "{{db}}",
           "refId": "A",
           "step": 240,
           "target": ""
