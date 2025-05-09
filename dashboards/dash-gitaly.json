@@ -201,7 +201,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{ "{{version}}" }}",
+          "legendFormat": "{{version}}",
           "refId": "A"
         }
       ],
@@ -274,7 +274,7 @@
           "expr": "sum by(client_name) (gitaly_service_client_requests_total{instance=~\"$instance\"})",
           "instant": true,
           "interval": "",
-          "legendFormat": "{{"{{client_name}}"}}",
+          "legendFormat": "{{client_name}}",
           "range": false,
           "refId": "A"
         }
@@ -386,7 +386,7 @@
           "exemplar": true,
           "expr": "sum by(grpc_method) (rate(gitaly_command_real_seconds_total{instance=~\"$instance\"}[5m]))",
           "interval": "",
-          "legendFormat": "{{"{{grpc_method}}"}}",
+          "legendFormat": "{{grpc_method}}",
           "refId": "A"
         }
       ],
@@ -516,7 +516,7 @@
           "format": "time_series",
           "interval": "1m",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{instance}}"}}",
+          "legendFormat": "{{instance}}",
           "refId": "A"
         }
       ],
@@ -631,7 +631,7 @@
           "format": "time_series",
           "interval": "1m",
           "intervalFactor": 1,
-          "legendFormat": "{{"{{instance}}"}}",
+          "legendFormat": "{{instance}}",
           "refId": "A"
         }
       ],
@@ -968,7 +968,7 @@
           "format": "time_series",
           "instant": false,
           "interval": "",
-          "legendFormat": "{{"{{le}}"}}",
+          "legendFormat": "{{le}}",
           "range": true,
           "refId": "A"
         },
@@ -984,7 +984,7 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "legendFormat": "{{"{{le}}"}}",
+          "legendFormat": "{{le}}",
           "range": true,
           "refId": "B"
         }
@@ -1083,7 +1083,7 @@
           "exemplar": true,
           "expr": "sum by(filetype) (gitaly_housekeeping_pruned_files_total{instance=~\"$instance\"}) ",
           "interval": "",
-          "legendFormat": "{{"{{filetype}}"}}",
+          "legendFormat": "{{filetype}}",
           "refId": "A"
         }
       ],
