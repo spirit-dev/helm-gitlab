@@ -313,7 +313,7 @@
           "hide": false,
           "interval": "1m",
           "intervalFactor": 5,
-          "legendFormat": "{{"{{le}}"}}",
+          "legendFormat": "{{le}}",
           "refId": "B"
         }
       ],
@@ -714,7 +714,7 @@
           "exemplar": true,
           "expr": "topk(10, sum by(feature_category) (rate(gitlab_sli_rails_request_total{instance=~\"$instance\"}[5m])))",
           "interval": "",
-          "legendFormat": "{{"{{feature_category}}"}}",
+          "legendFormat": "{{feature_category}}",
           "refId": "A"
         }
       ],
@@ -855,7 +855,7 @@
           "exemplar": true,
           "expr": "topk(10, sum by(feature_category) (rate(gitlab_sli_rails_request_error_total{instance=~\"$instance\"}[5m])))",
           "interval": "",
-          "legendFormat": "{{"{{feature_category}}"}}",
+          "legendFormat": "{{feature_category}}",
           "refId": "A"
         }
       ],
