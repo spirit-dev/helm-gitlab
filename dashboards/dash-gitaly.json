@@ -18,7 +18,7 @@
   "description": "Dashboard for gitaly of GitLab",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": 234,
   "links": [],
   "panels": [
