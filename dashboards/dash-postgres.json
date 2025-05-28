@@ -18,7 +18,7 @@
   "description": "Dashboard for postgresql of GitLab",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": 237,
   "links": [],
   "panels": [
