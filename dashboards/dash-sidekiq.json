@@ -18,7 +18,7 @@
   "description": "Dashboard for sidekiq of GitLab",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": 232,
   "links": [],
   "panels": [
