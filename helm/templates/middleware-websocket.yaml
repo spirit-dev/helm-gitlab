@@ -1,0 +1,31 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: {{ $.Release.Name }}-ingress-custom-add-headers
+spec:
+  headers:
+    customRequestHeaders:
+      Referrer-Policy: strict-origin-when-cross-origin
+      X-Forwarded-Ssl: "on"
+      X-Forwarded-Proto: "https"
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ $.Release.Name }}-webservice-default-external-private-websocket
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.gitlab.global.hosts.gitlab.name }}`) && PathPrefix(`/-/cable`)
+      middlewares:
+        - name: {{ $.Release.Name }}-ingress-custom-add-headers
+      services:
+        - name: gitlab-webservice-default
+          port: 8181
+  tls:
+    secretName: gitlab-external-private-tls
+    domains:
+      - main: gitlab-internal.spirit-dev.net
