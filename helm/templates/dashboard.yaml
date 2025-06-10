@@ -1,0 +1,25 @@
+{{- $releaseName := .Release.Name }}
+{{- $releaseNamespace := .Release.Namespace }}
+{{- $releaseService := .Release.Service }}
+{{- $name := include "gitlabContext.name" . }}
+{{- $chart := include "gitlabContext.chart" . }}
+
+{{- range $path, $_ :=  .Files.Glob  "dashboards/*.json" }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $releaseName }}-grafana-{{ $path | trimPrefix "dashboards/" | trimSuffix ".json" }}
+  namespace: {{ $releaseNamespace }}
+  labels:
+    app: {{ $name }}
+    chart: {{ $chart }}
+    release: {{ $releaseName }}
+    heritage: {{ $releaseService }}
+    grafana_dashboard: "1"
+  annotations:
+    grafana_dashboard_folder: "/tmp/dashboards/GitLab"
+data:
+  {{ $path | trimPrefix "dashboards/" }}: |-
+{{ $.Files.Get $path | indent 4 }}
+{{ end }}
