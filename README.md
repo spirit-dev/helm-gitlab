@@ -1,0 +1,36 @@
+# Welcome to gitlab
+
+[![App Status](https://argocd-internal.spirit-dev.net/api/badge?name=gitlab&revision=true&showAppName=true)](https://argocd-internal.spirit-dev.net/applications/gitlab)
+
+## Table of content
+
+[[_TOC_]]
+
+## Installation process
+
+The installation is entirely managed by Argocd.
+
+A `Makefile` is present here to ease the first and one-time deployment or in case of an issue.
+The installation should be done in two steps:
+
+```shell
+#> make dry-run ENV=<ENV>
+#> make install ENV=<ENV>
+```
+
+## troubleshooting
+
+### MinIO issue
+
+For some reason Longhorn lost the drive dedicated to MinIO... fuck it.
+
+Also somehow, the job responsible to create initial bucket failed.
+
+Here is a beggining of resolution guide: https://docs.gitlab.com/charts/advanced/external-object-storage/minio.html
+
+### Execute Rake commands
+
+1. Jump in the `toolbox` pod
+2. Run `gitlab-rake xyz` commands
+
+https://docs.gitlab.com/ee/raketasks/
