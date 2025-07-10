@@ -74,7 +74,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -179,7 +181,9 @@
         "orientation": "horizontal",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["first"],
+          "calcs": [
+            "first"
+          ],
           "fields": "/^git_version$/",
           "values": false
         },
@@ -253,7 +257,9 @@
         "namePlacement": "auto",
         "orientation": "horizontal",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -935,7 +941,7 @@
           "color": "rgba(255,0,255,0.7)"
         },
         "filterValues": {
-          "le": 1e-9
+          "le": 1e-09
         },
         "legend": {
           "show": true
@@ -1094,13 +1100,19 @@
   "preload": false,
   "refresh": "5s",
   "schemaVersion": 40,
-  "tags": ["gitaly"],
+  "tags": [
+    "gitaly"
+  ],
   "templating": {
     "list": [
       {
         "current": {
-          "text": ["All"],
-          "value": ["$__all"]
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": {
           "type": "prometheus",
@@ -1121,8 +1133,12 @@
       },
       {
         "current": {
-          "text": ["$__all"],
-          "value": ["$__all"]
+          "text": [
+            "$__all"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
         "includeAll": true,
         "multi": true,
