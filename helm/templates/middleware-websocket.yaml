@@ -26,6 +26,6 @@ spec:
         - name: gitlab-webservice-default
           port: 8181
   tls:
-    secretName: gitlab-external-private-tls
+    secretName: gitlab-external-private-tls # pragma: allowlist secret
     domains:
       - main: gitlab-internal.spirit-dev.net

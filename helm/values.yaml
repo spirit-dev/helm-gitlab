@@ -1,3 +1,13 @@
+gitlabContext:
+  ingressInternal:
+    annotations: {}
+    ingressClassName:
+    ingresses: {}
+  ingressExternalPrivate:
+    annotations: {}
+    ingressClassName:
+    ingresses: {}
+
 gitlab:
   ## NOTICE
   #
@@ -1123,8 +1133,8 @@ gitlab:
   redis:
     install: true
     auth:
-      existingSecret: gitlab-redis-secret
-      existingSecretKey: redis-password
+      existingSecret: gitlab-redis-secret # pragma: allowlist secret
+      existingSecretKey: redis-password # pragma: allowlist secret
       usePasswordFiles: true
     architecture: standalone
     cluster:
@@ -1139,13 +1149,13 @@ gitlab:
     auth:
       ## These need to be set, for the sake of bitnami/postgresql upgrade patterns.
       ## They are overridden by use of `existingSecret`
-      password: bogus-satisfy-upgrade
-      postgresPassword: bogus-satisfy-upgrade
+      password: bogus-satisfy-upgrade # pragma: allowlist secret
+      postgresPassword: bogus-satisfy-upgrade # pragma: allowlist secret
       ##
       usePasswordFiles: false
       existingSecret: '{{ include "gitlab.psql.password.secret" . }}'
       secretKeys:
-        adminPasswordKey: postgresql-postgres-password
+        adminPasswordKey: postgresql-postgres-password # pragma: allowlist secret
         userPasswordKey: '{{ include "gitlab.psql.password.key" $ }}'
     image:
       tag: 14.8.0
