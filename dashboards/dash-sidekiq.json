@@ -59,7 +59,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -172,7 +174,9 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
@@ -488,13 +492,17 @@
   "preload": false,
   "refresh": "",
   "schemaVersion": 40,
-  "tags": ["sidekiq"],
+  "tags": [
+    "sidekiq"
+  ],
   "templating": {
     "list": [
       {
         "current": {
           "text": "All",
-          "value": ["$__all"]
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": {
           "type": "prometheus",
