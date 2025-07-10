@@ -24,7 +24,7 @@ metadata:
     release: {{ $releasename }}
     heritage: {{ $releaseservice }}
 {{- with (merge ($v.annotations | default dict) ($annotations)) }}
-  annotations: 
+  annotations:
   {{- toYaml . | nindent 4 }}
 {{- end }}
 spec:
