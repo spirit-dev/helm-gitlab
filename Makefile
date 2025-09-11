@@ -2,7 +2,7 @@
 
 # Service
 NAMESPACE = gitlab
-RELEASE_NAME = gitlab-turingpi
+RELEASE_NAME = gitlab
 # ENV ?= ### Specify the env to use
 ENV = turingpi
 pod := $$(kubectl get pods -n ${NAMESPACE} |  grep -m1 ${RELEASE_NAME} | cut -d' ' -f1)
