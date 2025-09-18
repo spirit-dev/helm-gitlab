@@ -6,7 +6,7 @@
 
 [![GitLab Sync](https://img.shields.io/badge/gitlab_sync-gitlab-blue?style=for-the-badge&logo=gitlab)](https://gitlab-internal.spirit-dev.net/github-mirror/helm-gitlab) <!-- markdownlint-disable MD041 -->
 [![GitHub Mirror](https://img.shields.io/badge/github_mirror-gitlab-blue?style=for-the-badge&logo=github)](https://github.com/spirit-dev/helm-gitlab)
-[![App Status](https://argocd-internal.spirit-dev.net/api/badge?name=gitlab-turingpi&revision=true&showAppName=true)](https://argocd-internal.spirit-dev.net/applications/gitlab-turingpi)
+[![App Status](https://argocd-internal.spirit-dev.net/api/badge?name=gitlab&revision=true&showAppName=true)](https://argocd-internal.spirit-dev.net/applications/gitlab)
 
 <!--TOC-->
 
