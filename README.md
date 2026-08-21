@@ -1,12 +1,6 @@
 # gitlab
 
-<!-- More info: https://github.com/Ileriayo/markdown-badges -->
-<!-- More info: https://shields.io/badges -->
-<!-- More info: https://badgesgenerator.com/ -->
 
-[![GitLab Sync](https://img.shields.io/badge/gitlab_sync-gitlab-blue?style=for-the-badge&logo=gitlab)](https://gitlab-internal.spirit-dev.net/github-mirror/helm-gitlab) <!-- markdownlint-disable MD041 -->
-[![GitHub Mirror](https://img.shields.io/badge/github_mirror-gitlab-blue?style=for-the-badge&logo=github)](https://github.com/spirit-dev/helm-gitlab)
-[![App Status](https://argocd-internal.spirit-dev.net/api/badge?name=gitlab-turingpi&revision=true&showAppName=true)](https://argocd-internal.spirit-dev.net/applications/gitlab-turingpi)
 
 <!--TOC-->
 
@@ -44,4 +38,4 @@ Here is a beggining of resolution guide: <https://docs.gitlab.com/charts/advance
 1. Jump in the `toolbox` pod
 2. Run `gitlab-rake xyz` commands
 
-<https://docs.gitlab.com/ee/raketasks/>
+<https://docs.gitlab.com/ee/raketasks/
